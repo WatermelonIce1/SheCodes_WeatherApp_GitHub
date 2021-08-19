@@ -1,0 +1,64 @@
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+.backround {
+  background: transparent 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 5px groove rgba(93, 241, 200, 0.2);
+  border-radius: 19px;
+}
+
+.header {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.bold {
+  font-weight: bolder;
+}
+.sun {
+  color: #fbca03;
+  font-size: 20px;
+}
+
+.card-title {
+  font-size: 35px;
+}
+.card-subtitle mb-2 text-muted {
+  font-size: large;
+}
+
+.card-text {
+  font-weight: bolder;
+}
+
+.cityselector:hover {
+  text-emphasis-color: black;
+}
+.cityselector {
+  border: black;
+  outline: black;
+}
+.container {
+  font-size: 20px;
+}
+.invisible {
+  color: rgba(255, 255, 255, 0);
+}
+.headercard {
+  border: 5px groove rgba(93, 241, 200, 0.2);
+  border-radius: 19px;
+  color: #f1f1f1;
+}
