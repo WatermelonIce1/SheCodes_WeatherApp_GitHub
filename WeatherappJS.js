@@ -49,8 +49,18 @@ function searchCity(event) {
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 }
+
 let button = document.querySelector("#search");
 button.addEventListener("click", searchCity);
+
+let textfield = document.querySelector("#search-text-input");
+textfield.addEventListener("keydown", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("search").click();
+  }
+});
+
 console.log(searchCity);
 
 function currentPosition(position) {
