@@ -18,7 +18,7 @@
 .backround {
   background: transparent 50%;
   background-color: rgba(255, 255, 255, 0.3);
-  border: 5px groove rgba(93, 241, 200, 0.2);
+  border: 7px solid #809bbd;
   border-radius: 19px;
 }
 
@@ -58,9 +58,9 @@
   color: rgba(255, 255, 255, 0);
 }
 .headercard {
-  border: 5px groove rgba(93, 241, 200, 0.2);
+  border: 7px solid #809bbd;
   border-radius: 19px;
-  color: #f1f1f1;
+  color: #f9f871;
 }
 .link {
   text-align: center;
