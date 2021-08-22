@@ -19,6 +19,9 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </video>
 
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Besley&display=swap" rel="stylesheet">
 
 
   </head>
@@ -30,13 +33,13 @@
         <div class="headercard" style="width: 40rem;">
             <div class=" card-body">
                 <h5 class="card-title" id="city">Stuttgart</h5>
-                <h6 class="card-subtitle mb-2 text-muted">H:22 L:15</h6>
+                <h6 class="card-subtitle mb-2 text-muted" id="hl">High:22 Low:15</h6>
                 <p class="card-text" id="condition">Cloudy</p>
-                <p class="card-text" id="humidity">Cloudy</p>
-                <p class="card-text" id= "currentTemperature"> 19</p>
+                <p class="card-text" id="humidity">88% humidity</p>
+                <p class="card-text" id= "currentTemperature"> 19°</p>
                 <a href="#" id="celsius-link">°C</a>
                 <a href="#" id="fahrenheit-link">°F</a>
-                <p class="sun">☀️</p>
+                <p class="sun" id="icon">☀️</p>
 
                 <form class="cityselector"><input type="text" name="City" placeholder="Select your City" id="search-text-input"></form>
                 <form class ="search"> <input type="submit" value="search" id= "search"></form>
