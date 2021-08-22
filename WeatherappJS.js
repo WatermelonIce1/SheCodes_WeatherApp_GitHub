@@ -91,7 +91,7 @@ function showTemperature(response) {
   let temp = document.querySelector("#currentTemperature");
   temp.innerHTML = `Current Temperature: ${temperature}˚C`;
   let location = document.querySelector("#city");
-  location.innerHTML = `${city}, ${place}`;
+  location.innerHTML = `${city}, ${place} - ${day}, ${month} ${date} ${year}`;
 
   let todaycondition = document.querySelector("#condition");
   todaycondition.innerHTML = ` Condition: ${condition}`;
