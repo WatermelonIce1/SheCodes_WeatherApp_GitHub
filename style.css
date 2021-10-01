@@ -18,7 +18,7 @@
 .backround {
   background: transparent 50%;
   background-color: rgba(255, 255, 255, 0.3);
-  border: 7px solid #809bbd;
+  border: 3px solid #809bbd;
   border-radius: 19px;
   margin: 0 auto;
   font-family: "Nunito Sans", sans-serif;
@@ -26,6 +26,7 @@
 
 .header {
   background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
 }
 .bold {
   font-weight: bolder;
@@ -42,10 +43,6 @@
   font-size: large;
 }
 
-.card-text {
-  font-weight: bolder;
-}
-
 .cityselector:hover {
   text-emphasis-color: black;
 }
@@ -56,15 +53,19 @@
 }
 .container {
   font-size: 20px;
+  text-align: center;
 }
 .invisible {
   color: rgba(255, 255, 255, 0);
 }
 .headercard {
-  border: 7px solid #809bbd;
+  background: transparent 50%;
+  border: 3px solid #809bbd;
   border-radius: 19px;
-  color: #f9f871;
+  color: #ffedcb;
   font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+  margin: auto;
 }
 .link {
   text-align: center;
@@ -80,4 +81,7 @@
 .hl {
   color: #ffffff;
   font-family: "Nunito Sans", sans-serif;
+}
+.condition {
+  font-weight: 100;
 }
