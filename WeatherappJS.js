@@ -81,45 +81,60 @@ function showCurrentPosition(event) {
 let locateButton = document.querySelector("#currentLocation");
 locateButton.addEventListener("click", showCurrentPosition);
 
-function displayTemperature(response) {
-  let temperatureElement = document.querySelector("#temperature");
-  let cityElement = document.querySelector("#city");
-  let descriptionElement = document.querySelector("#description");
-  let humidityElement = document.querySelector("#humidity");
-  let windElement = document.querySelector("#wind");
-  let dateElement = document.querySelector("#date");
-  let iconElement = document.querySelector("#icon");
-  celsiusTemperature = response.data.main.temp;
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
-  cityElement.innerHTML = response.data.name;
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
-}
-console.log(iconElement);
-
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
+  temperature = Math.round(response.data.main.temp);
   let city = response.data.name;
   let place = response.data.sys.country;
   let condition = response.data.weather[0].description;
   let humidity = response.data.main.humidity;
-
+  let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
   let temp = document.querySelector("#currentTemperature");
   temp.innerHTML = `Current Temperature: ${temperature}˚C`;
   let location = document.querySelector("#city");
   location.innerHTML = `${city}, ${place} - ${day}, ${month} ${date} ${year}`;
-
+  windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)}`;
   let todaycondition = document.querySelector("#condition");
   todaycondition.innerHTML = ` Condition: ${condition}`;
   let todayhumidity = document.querySelector("#humidity");
   todayhumidity.innerHTML = `Humidity: ${humidity}%`;
 
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+  console.log(iconElement);
   console.log(humidity);
 }
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#currentTemperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  console.log(temperature);
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = `Current Temperature: ${Math.round(
+    fahrenheitTemp
+  )} ˚F`;
+  console.log(temperatureElement);
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#currentTemperature");
+  temperatureElement.innerHTML = `Current Temperature: ${Math.round(
+    temperature
+  )} ˚C`;
+}
+
+let celsiusTemp = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
