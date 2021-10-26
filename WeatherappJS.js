@@ -82,7 +82,7 @@ let locateButton = document.querySelector("#currentLocation");
 locateButton.addEventListener("click", showCurrentPosition);
 
 function showTemperature(response) {
-  temperature = Math.round(response.data.main.temp);
+  let temperature = Math.round(response.data.main.temp);
   let city = response.data.name;
   let place = response.data.sys.country;
   let condition = response.data.weather[0].description;
@@ -110,6 +110,7 @@ function showTemperature(response) {
 
 function displayFahrenheitTemp(event) {
   event.preventDefault();
+  let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#currentTemperature");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
@@ -123,6 +124,7 @@ function displayFahrenheitTemp(event) {
 
 function displayCelsiusTemp(event) {
   event.preventDefault();
+  let temperature = Math.round(response.data.main.temp);
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#currentTemperature");
