@@ -9,6 +9,8 @@ let minutes = now.getMinutes();
 minutes = minutes > 9 ? minutes : "0" + minutes;
 let year = now.getFullYear();
 
+let temperature;
+
 let days = [
   "Sunday",
   "Monday",
@@ -110,12 +112,12 @@ function showTemperature(response) {
 
 function displayFahrenheitTemp(event) {
   event.preventDefault();
-  // let temperature = Math.round(response.data.main.temp);
-  //let temperatureElement = document.querySelector("#currentTemperature");
+
+  let temperatureElement = document.querySelector("#currentTemperature");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   console.log(temperature);
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  let fahrenheitTemp = (temperature * 9) / 5 + 32;
   temperatureElement.innerHTML = `Current Temperature: ${Math.round(
     fahrenheitTemp
   )} ˚F`;
@@ -124,7 +126,7 @@ function displayFahrenheitTemp(event) {
 
 function displayCelsiusTemp(event) {
   event.preventDefault();
-  let temperature = Math.round(response.data.main.temp);
+
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#currentTemperature");
