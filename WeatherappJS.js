@@ -111,7 +111,7 @@ function showTemperature(response) {
 function displayFahrenheitTemp(event) {
   event.preventDefault();
   // let temperature = Math.round(response.data.main.temp);
-  let temperatureElement = document.querySelector("#currentTemperature");
+  //let temperatureElement = document.querySelector("#currentTemperature");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   console.log(temperature);
