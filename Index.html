@@ -19,27 +19,33 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </video>
 
-<link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Besley&display=swap" rel="stylesheet">
 
 
   </head>
   <body>
    
+  
    
 <div class="container">
     
-        <div class="headercard" style="width: 40rem;">
-            <div class=" card-body">
+        <div class="headercard" style="width: 18rem;">
+            <div class="card-body">
                 <h5 class="card-title" id="city">Stuttgart</h5>
-                <h6 class="card-subtitle mb-2 text-muted" id="hl">High:22 Low:15</h6>
-                <p class="card-text" id="condition">Cloudy</p>
-                <p class="card-text" id="humidity"> Humidity: </p>
-                <p class="card-text" id= "currentTemperature"> Current Temperature</p>
+                <h6 class="card-subtitle mb-2 text-muted">H:22 L:15</h6>
+                <p class="card-text" id="condition">Condition: Cloudy</p>
+                <p class="card-text" id="humidity">Humidity 75%</p>
+                <p class="card-text" id="wind">Wind: 25</p>
+                <p class="card-text" id= "currentTemperature"> 19</p>
+                <p class="card-text" id= "imagePlaceholde"> Sun 2 </p>
                 <a href="#" id="celsius-link">°C</a>
                 <a href="#" id="fahrenheit-link">°F</a>
-                <p class="sun" id="icon">☀️</p>
+                <p class="sun">
+                  <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  id="icon"
+                  alt="Clear"
+                  
+                /></p>
 
                 <form class="cityselector"><input type="text" name="City" placeholder="Select your City" id="search-text-input"></form>
                 <form class ="search"> <input type="submit" value="search" id= "search"></form>
@@ -115,10 +121,9 @@
       
       </div>
     </div>
-    <br>
 
-    <div class=link>
-    <a href="https://github.com/WatermelonIce1/SheCodes_WeatherApp_GitHub" target="_blank" >Open-Source Code </a> <p class=name>by Dorothee Milde</p>
+<div>
+    <a href="https://github.com/WatermelonIce1/SheCodes_WeatherApp_GitHub"> Open-Source Code by Dorothee Milde </a>
 </div>
     <script src="WeatherappJS.js"></script>
    
